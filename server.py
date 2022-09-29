@@ -1,6 +1,6 @@
 import socket, threading
 
-host = '127.0.0.1'
+host = '85.237.187.72'
 port = 7976
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
