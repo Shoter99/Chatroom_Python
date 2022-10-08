@@ -14,6 +14,7 @@ def broadcast(msg):
     for client in clients:
         client.send(msg)
 
+
 def handle(client):
     while True:
         try:
@@ -28,6 +29,7 @@ def handle(client):
             nicknames.remove(nickname)
             break
 
+
 def receive():
     while True:
         client, address = server.accept()
@@ -40,5 +42,6 @@ def receive():
         broadcast("{} joined!".format(nickname).encode('ascii'))
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
+
 
 receive()
